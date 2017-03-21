@@ -236,20 +236,13 @@ const listingsPromise = Fs.readFileAsync('./data/listings.txt', 'utf8')
   .then(parseJsonLine);
 const productsPromise = Fs.readFileAsync('./data/products.txt', 'utf8')
   .then(parseJsonLine);
-const stopWordsPromise = Fs.readFileAsync('./data/products.txt', 'utf8')
+const stopWordsPromise = Fs.readFileAsync('./data/stop_words.txt', 'utf8')
   .then(parseWordList);
 
 return Promise.all([listingsPromise, productsPromise, stopWordsPromise])
   .spread(matchListingsWithProducts)
   .then((results) => {
 
-    for (const { product_name, listings } of results) {
-      console.log(product_name);
-      for (const { title } of listings) {
-        console.log(' => ' + title);
-      }
-    }
-    return;
     const lines = results.map((result) => {
 
       return JSON.stringify(result);
