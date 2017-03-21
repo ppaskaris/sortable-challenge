@@ -1,0 +1,16 @@
+{
+  "name": "sortable-challenge",
+  "version": "1.0.0",
+  "description": "Why are you reading my package.json file?",
+  "main": "index.js",
+  "author": "Patrick Paskaris <patrick@paskaris.gr>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-hapi": "^10.0.0",
+    "eslint-plugin-hapi": "^4.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  }
+}

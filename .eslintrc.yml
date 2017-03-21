@@ -1,0 +1,6 @@
+extends: hapi
+env:
+  mocha: true
+rules:
+  indent: ['error', 2, { SwitchCase: 1 }]
+  no-undef: ['error', { typeof: false }]
