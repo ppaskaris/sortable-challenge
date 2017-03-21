@@ -5,6 +5,7 @@ Products and listings are read from `data/products.txt` and `data/listings.txt`
 respectively. Run it from a shell like so:
 
 ```sh
+$ npm install --production
 $ node index.js > results.txt
 ```
 
